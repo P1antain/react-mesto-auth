@@ -8,6 +8,17 @@
 /* Header */
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__burger/header__burger.css);
+@import url(./blocks/header/__burger-btn/header__burger-btn.css);
+@import url(./blocks/header/__burger-btn/_active/header__burger-btn_active.css);
+@import url(./blocks/header/__burger-menu/header__burger-menu.css);
+@import url(./blocks/header/__burger-menu/_active/header__burger-menu_active.css);
+@import url(./blocks/header/__button-link/header__button-link.css);
+@import url(./blocks/header/__close-btn/header__close-btn.css);
+@import url(./blocks/header/__close-btn/_active/header__close-btn_active.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__menu/header__menu.css);
+@import url(./blocks/header/__wrapper/header__wrapper.css);
 /* Profil */
 @import url(./blocks/profil/profil.css);
 @import url(./blocks/profil/__avatar/profil__avatar.css);
@@ -34,10 +45,12 @@
 @import url(./blocks/popup/__overlay/popup__overlay.css);
 @import url(./blocks/popup/__close/popup__close.css);
 @import url(./blocks/popup/__edit/popup__edit.css);
+@import url(./blocks/popup/__edit-tooltip/popup__edit-tooltip.css);
 @import url(./blocks/popup/__edit/_theme/popup__edit_theme-profil.css);
 @import url(./blocks/popup/__edit/_theme/popup__edit_theme-image.css);
 @import url(./blocks/popup/__input/popup__input.css);
 @import url(./blocks/popup/__save/popup__save.css);
+@import url(blocks/popup/__save-tooltip/popup__save-tooltip.css);
 @import url(./blocks/popup/__save/_disable/popup__save_disable.css);
 @import url(./blocks/popup/_opened/popup_opened.css);
 @import url(./blocks/popup/__form/popup__form.css);
@@ -48,7 +61,15 @@
 @import url(./blocks/popup/__input-error/_active/popup__input-error_active.css);
 @import url(./blocks/popup/__section/popup__section.css);
 @import url(./blocks/popup/__input/-active/popup__input-active.css);
-
+@import url(./blocks/popup/__auth/popup__auth.css);
+@import url(./blocks/popup/__auth-fail/popup__auth-fail.css);
+/*AUTH*/
+@import url(./blocks/auth/auth.css);
+@import url(./blocks/auth/__input/auth__input.css);
+@import url(./blocks/auth/__caption/auth__caption.css);
+@import url(./blocks/auth/__heading/auth__heading.css);
+@import url(./blocks/auth/__link/auth__link.css);
+@import url(./blocks/auth/__submit/auth__submit.css);
 /* FOOTER */
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__author/footer__author.css);
