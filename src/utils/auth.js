@@ -1,7 +1,6 @@
 class Auth {
-    constructor({ baseUrl, headers }) {
-        this._baseUrl = baseUrl;
-        this._headers = headers;
+    constructor({ url }) {
+        this._url = url;
     }
 
     _checkData (res) {
@@ -12,9 +11,11 @@ class Auth {
     }
 
     register(email, password) {
-        return fetch(`${this._baseUrl}/signup`, {
+        return fetch(`${this._url}/signup`, {
             method: "POST",
-            headers: this._headers,
+            headers: {
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify({
                 email: email,
                 password: password,
@@ -23,9 +24,11 @@ class Auth {
     }
 
     authorize(email, password) {
-        return fetch(`${this._baseUrl}/signin`, {
+        return fetch(`${this._url}/signin`, {
             method: "POST",
-            headers: this._headers,
+            headers: {
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify({
                 email: email,
                 password: password,
@@ -34,10 +37,10 @@ class Auth {
     }
 
     getContent(token) {
-        return fetch(`${this._baseUrl}/users/me`, {
+        return fetch(`${this._url}/users/me`, {
             method: 'GET',
             headers: {
-                ...this._headers,
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`,
             },
         }).then(this._checkData);
@@ -45,10 +48,8 @@ class Auth {
 }
 
 const auth = new Auth({
-    baseUrl: "https://auth.nomoreparties.co",
-    headers: {
-        "Content-Type": "application/json",
-    },
+    url: "https://auth.nomoreparties.co"
+
 });
 
 export default auth;

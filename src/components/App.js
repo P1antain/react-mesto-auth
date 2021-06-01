@@ -129,7 +129,6 @@ function App() {
 
     }
 
-
     function handleCardDelete(card) {
         api.deleteCard(card)
             .then(() => {
@@ -189,10 +188,10 @@ function App() {
     }
 
     function checkUserToken() {
-        const token = localStorage.getItem("jwt");
-        if (token) {
+        const jwt = localStorage.getItem("jwt");
+        if (jwt) {
             auth
-                .getContent(token)
+                .getContent(jwt)
                 .then((res) => {
                     if (res) {
                         setLoggedIn(true);
@@ -204,11 +203,12 @@ function App() {
                     console.log(err);
                 });
         }
+
     }
 
 
     React.useEffect(() => {
-        checkUserToken();
+            checkUserToken();
     }, []);
 
     return (
